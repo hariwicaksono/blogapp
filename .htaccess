@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+	RewriteBase /
+	RewriteRule ^index\.html$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteRule . /index.html [L]
+	ErrorDocument 404 http://localhost/blogapp/404.html
+
+
+</IfModule>
